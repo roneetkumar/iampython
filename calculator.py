@@ -1,21 +1,16 @@
 import os
 
-
 def add(x, y):
     return x + y
-
 
 def subtract(x, y):
     return x - y
 
-
 def multiply(x, y):
     return x * y
 
-
 def divide(x, y):
     return x / y
-
 
 print("Select operation.")
 print("1.Add")
@@ -42,4 +37,4 @@ elif choice == '4':
 else:
     print("Invalid input")
 
-os.system("PAUSE")    
+os.system("PAUSE")
