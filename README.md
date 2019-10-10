@@ -1,3 +1,0 @@
-# iampython
-
-hello world
