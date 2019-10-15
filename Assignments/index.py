@@ -1,4 +1,4 @@
- # Assignment 1
+# Assignment 1
 
 # Write a program that requests a number from the keyboard,
 # then prints out its binary representation and avoid printing leading zeros. (4 % ) - done
