@@ -49,7 +49,7 @@ def toBinary(num):
 
 
 def toOctal(num):
-    return 0 if num <= 0 else num % 8 + 10 * toBinary(num // 8)
+    return 0 if num <= 0 else num % 8 + 10 * toOctal(num // 8)
 
 
 while True:
