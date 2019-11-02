@@ -7,7 +7,7 @@ places = {
 }
 loc = {
     1: ["North", "South", "East", "West"],
-    2: "North", "South", "East",
+    2: ["North", "South", "East"],
     3: ["West"],
     4: ["North", "East"],
     5: ["East", "South"]

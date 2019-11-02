@@ -1,5 +1,4 @@
 class Animal:
-
     def walk(self):
         print("walking")
 
@@ -12,7 +11,6 @@ class Dog(Animal):
 class Cat(Animal):
     def meow(self):
         print("meow")
-    pass
 
 
 dog = Dog()
