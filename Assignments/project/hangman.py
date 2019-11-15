@@ -1,6 +1,4 @@
 from random import randint
-from math import floor
-
 
 words = ["Python", "Scripting", "Mississippi", "NeuraLink", "StarLink"]
 
@@ -22,45 +20,47 @@ def guessLetter(wordLen):
     return temp.lower()
 
 
-def checkWord(guess, word, ans, chance, wrongGuess):
+def checkWord(guess, word, ans, attempt, wrongGuess):
     if guess in word:
         for i in range(len(word)):
             if guess == word[i]:
                 ans[i] = guess
-        print(''.join(ans))
+        print(' '.join(ans))
 
     else:
         if guess not in wrongGuess:
-            chance = chance - 1
+            attempt = attempt - 1
 
         wrongGuess.add(guess)
-        print(f"your guessed letter {guess} is not in the word")
-        print(f"you have {chance} chances left")
+        print(f"Your guessed letter {guess} is not in the word")
+        print(f"you have {attempt} attempts left")
 
-    if chance > 0 and '_' in ans:
+    if attempt > 0 and '_' in ans:
         guess = guessLetter(len(word))
-        checkWord(guess, word, ans, chance, wrongGuess)
+        checkWord(guess, word, ans, attempt, wrongGuess)
 
 
 def startGame():
+    # randonly selected a word from list
     word = words[randint(0, len(words) - 1)].lower()
-    ans = list(len(word) * '_')
+    # variable to store
+    finalList = list(len(word) * '_')
 
-    print('_' * len(word))
+    print('_ ' * len(word))
 
     guess = guessLetter(len(word))
-
-    chance = floor(len(word) / 2)
-
+    attempt = int(len(word) / 2)
     wrongGuess = {""}
 
-    checkWord(guess, word, ans, chance, wrongGuess)
+    checkWord(guess, word, finalList, attempt, wrongGuess)
 
-    if '_' not in ans:
-        print("you win")
+    if '_' not in finalList:
+        print("\nYou Win")
     else:
-        print("you lost")
+        print("\nYou Lose")
 
+
+# main--------------------------------------
 
 displayMenu()
 choice = chooseOption()

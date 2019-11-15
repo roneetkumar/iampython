@@ -23,7 +23,6 @@ print(string2float(stringLS))
 # B. Write a function positive_min(lf)
 #  that returns the smallest positive float in the list lf
 
-
 def positive_min(ls):
     '''
     INPUT: list of float numbers as (ls)\n
