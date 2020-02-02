@@ -11,7 +11,6 @@
 # else:
 #     print(False)
 
-
 # # Write an expression inorder that evaluates to True if the numbers are either in ascending or descending order, and
 
 
@@ -33,7 +32,6 @@
 
 # # 3. Write a program squares.py with a for loop that produces the following output:
 # # 1 4 9 16 25 36 49 64 81 100
-
 
 # for num in range(1, 11):
 #     print(num * num)

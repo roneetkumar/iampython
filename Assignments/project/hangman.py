@@ -41,9 +41,9 @@ def checkWord(guess, word, ans, attempt, wrongGuess):
 
 
 def startGame():
-    # randonly selected a word from list
+
     word = words[randint(0, len(words) - 1)].lower()
-    # variable to store
+
     finalList = list(len(word) * '_')
 
     print('_ ' * len(word))
